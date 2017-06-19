@@ -13,7 +13,6 @@
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -25,7 +24,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'jquery.min.js', 'agency.min.js', 'application', 'data-turbolinks-track': 'reload' %>
+
 
     <meta charset="utf-8">
 
@@ -41,5 +40,69 @@
 
   <body id="page-top" class="index">
     <%= yield %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Nav slide down -->
+    <div class="overlay overlay-slidedown">
+      <button type="button" class="overlay-close">Close</button>
+      <nav>
+        <ul>
+          <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
+          <li><a href="/about" data-turbolinks="false">About</a></li>
+          <li><a href="/team" data-turbolinks="false">The team</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <script>
+        $(document).ready(function() {
+          	var triggerBttn = document.getElementById( 'trigger-overlay' ),
+          		overlay = document.querySelector( 'div.overlay' ),
+          		closeBttn = overlay.querySelector( 'button.overlay-close' );
+          		transEndEventNames = {
+          			'WebkitTransition': 'webkitTransitionEnd',
+          			'MozTransition': 'transitionend',
+          			'OTransition': 'oTransitionEnd',
+          			'msTransition': 'MSTransitionEnd',
+          			'transition': 'transitionend'
+          		},
+          		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+          		support = { transitions : Modernizr.csstransitions };
+
+          	function toggleOverlay() {
+          		if( classie.has( overlay, 'open' ) ) {
+          			classie.remove( overlay, 'open' );
+          			classie.add( overlay, 'close' );
+          			var onEndTransitionFn = function( ev ) {
+          				if( support.transitions ) {
+          					if( ev.propertyName !== 'visibility' ) return;
+          					this.removeEventListener( transEndEventName, onEndTransitionFn );
+          				}
+          				classie.remove( overlay, 'close' );
+          			};
+          			if( support.transitions ) {
+          				overlay.addEventListener( transEndEventName, onEndTransitionFn );
+          			}
+          			else {
+          				onEndTransitionFn();
+          			}
+          		}
+          		else if( !classie.has( overlay, 'close' ) ) {
+          			classie.add( overlay, 'open' );
+          		}
+          	}
+
+          	triggerBttn.addEventListener( 'click', toggleOverlay );
+          	closeBttn.addEventListener( 'click', toggleOverlay );
+            $('.next-step').animateCSS('pulse', {
+              delay: 1000,
+              duration: 2500,
+              // complete: function() {
+              //   $(this).remove();
+              // }
+            });
+          });
+
+    </script>
   </body>
 </html>
