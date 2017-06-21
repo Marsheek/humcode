@@ -1,24 +1,30 @@
-# README
+Style Guide
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+social buttons hover
 
-Things you may want to cover:
+#2dc7ff
 
-* Ruby version
+buttons background
+#f0f8ff
+button fonts
+rgba(18, 84, 136, 1)
 
-* System dependencies
+buttons border
+rgba(18, 84, 136, 0.9)
 
-* Configuration
+Navbar / image colour and opacity
 
-* Database creation
+navbar
+rgba(18, 84, 136, 0.9)
 
-* Database initialization
+text
 
-* How to run the test suite
+portfolio
+#f0f8ff
 
-* Services (job queues, cache servers, search engines, etc.)
+fonts
 
-* Deployment instructions
-
-* ...
+font-family: 'Roboto Mono', monospace;
+weight 100,300,400
+font-family: 'Open Sans', sans-serif;
+weight 300,400

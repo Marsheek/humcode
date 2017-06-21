@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -54,7 +55,7 @@
  a:focus,
  a:active,
  a.active {
-   color: #fec503;
+   color: rgba(18, 84, 136, 0.9);
  }
  h1,
  h2,
@@ -63,7 +64,6 @@
  h5,
  h6 {
    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-   text-transform: uppercase;
    font-weight: 700;
  }
  .img-centered {
@@ -165,6 +165,26 @@
  .btn-xl .badge {
    color: #fed136;
    background-color: white;
+ }
+
+ .bttn-style {
+   background-color: #f0f8ff;
+   border-radius: 6px;
+   border-color: #2dc7ff;
+   padding: 5px 15px;
+   color: rgba(18, 84, 136, 1);
+   font-size: 25px;
+   width: 300px;
+ }
+
+ .bttn-style:hover {
+   background-color: #2dc7ff;
+   border-radius: 6px;
+   border-color: #2dc7ff;
+   padding: 5px 15px;
+   color: white;
+   font-size: 25px;
+   width: 300px;
  }
  .navbar-custom {
    background-color: transparent;
@@ -303,7 +323,7 @@
    }
  }
  section {
-   padding: 100px 0;
+   padding: 75px 0;
  }
  section h2.section-heading {
    font-size: 40px;
@@ -328,6 +348,7 @@
  }
 
 
+// team CSS
 
  #portfolio .portfolio-item {
    margin: 0 0 15px;
@@ -439,6 +460,13 @@
   background-size: cover;
   -o-background-size: cover;
   text-align: center;
+}
+
+#approach h2 {
+ color: #f0f8ff;
+ font-family: 'Roboto Mono', monospace;
+ font-weight: 100;
+ font-size: 70px;
 }
 
 
@@ -706,7 +734,7 @@
  }
  ul.social-buttons li a {
    display: block;
-   background-color: #222222;
+   background-color: rgba(18, 84, 136, 1);
    height: 40px;
    width: 40px;
    border-radius: 100%;
@@ -721,7 +749,7 @@
  ul.social-buttons li a:hover,
  ul.social-buttons li a:focus,
  ul.social-buttons li a:active {
-   background-color: #fed136;
+   background-color: #2dc7ff;
  }
  .btn:focus,
  .btn:active,
@@ -771,46 +799,49 @@
    background-color: transparent;
    top: 25px;
    right: 25px;
-
-   cursor: pointer;
+  //  background-image: image("x.png");
+  //  cursor: pointer;
  }
  .portfolio-modal .close-modal:hover {
    opacity: 0.3;
  }
- .portfolio-modal .close-modal .lr {
-   height: 75px;
-   width: 1px;
-   margin-left: 35px;
-   background-color: #222222;
-   transform: rotate(45deg);
-   -ms-transform: rotate(45deg);
-   /* IE 9 */
-   -webkit-transform: rotate(45deg);
-   /* Safari and Chrome */
-   z-index: 1051;
+ .portfolio-modal .modal-content label {
+   text-align: left;
  }
- .portfolio-modal .close-modal .lr .rl {
-   height: 75px;
-   width: 1px;
-   background-color: #222222;
-   transform: rotate(90deg);
-   -ms-transform: rotate(90deg);
-   /* IE 9 */
-   -webkit-transform: rotate(90deg);
-   /* Safari and Chrome */
-   z-index: 1052;
- }
+ // .portfolio-modal .close-modal .lr {
+ //   height: 75px;
+ //   width: 1px;
+ //   margin-left: 35px;
+ //   background-color: #222222;
+ //   transform: rotate(45deg);
+ //   -ms-transform: rotate(45deg);
+ //   /* IE 9 */
+ //   -webkit-transform: rotate(45deg);
+ //   /* Safari and Chrome */
+ //   z-index: 1051;
+ // }
+ // .portfolio-modal .close-modal .lr .rl {
+ //   height: 75px;
+ //   width: 1px;
+ //   background-color: #222222;
+ //   transform: rotate(90deg);
+ //   -ms-transform: rotate(90deg);
+ //   /* IE 9 */
+ //   -webkit-transform: rotate(90deg);
+ //   /* Safari and Chrome */
+ //   z-index: 1052;
+ // }
  .portfolio-modal .modal-backdrop {
    opacity: 0;
    display: none;
  }
  ::-moz-selection {
    text-shadow: none;
-   background: #fed136;
+   background: transparent;
  }
  ::selection {
    text-shadow: none;
-   background: #fed136;
+   background: transparent;
  }
  img::selection {
    background: transparent;
@@ -820,6 +851,24 @@
  }
  body {
    webkit-tap-highlight-color: #fed136;
+ }
+
+ .profile-head {
+   font-family: 'Roboto Mono', monospace;
+   color: #f0f8ff;
+   font-weight: 100;
+ }
+
+ .profile-text {
+   font-size: 16px;
+   font-weight: 300;
+   line-height: 1.4;
+   color: #f0f8ff;
+ }
+ @media (min-width: 768px) {
+   .profile-text {
+     font-size: 21px;
+   }
  }
 
 
@@ -3337,7 +3386,14 @@ label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 40px;
+  font-weight: 300;
+  color: #f0f8ff;
+
+}
+.modal-content label {
+  text-align: left;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
@@ -5124,6 +5180,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand > img {
   display: block;
+  position: absolute;
+  left: 25px;
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
@@ -6784,7 +6842,11 @@ button.close {
 .modal-body {
   position: relative;
   background-color: rgba(18,84,136,0.8);
+  // border-radius: 40px;
   padding: 15px;
+
+  // -webkit-
+  // -moz
 }
 .modal-footer {
   padding: 15px;
@@ -7596,15 +7658,15 @@ button.close {
 }
 /*# sourceMappingURL=bootstrap.css.map */
 /* Overlay style */
-.overlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(0,0,0,0.9);
-	z-index: 100;
-}
+// .overlay {
+// 	position: fixed;
+// 	width: 100%;
+// 	height: 100%;
+// 	top: 0;
+// 	left: 0;
+// 	background: rgba(0,0,0,0.9);
+// 	z-index: 100;
+// }
 
 /* Overlay closing cross */
 .overlay .overlay-close {
@@ -7632,8 +7694,7 @@ button.close {
     z-index: 1000;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgba(18, 84, 136, 1);
     overflow-y: hidden;
     transition: 0.5s;
 }
@@ -7650,13 +7711,13 @@ button.close {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: #f0f8ff;
     display: block;
     transition: 0.3s;
 }
 
 .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+    color: #2dc7ff;
 }
 
 .overlay .closebtn {
@@ -7671,6 +7732,7 @@ button.close {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
     font-size: 40px;
+
     top: 15px;
     right: 35px;
   }

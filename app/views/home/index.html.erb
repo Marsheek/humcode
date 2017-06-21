@@ -25,7 +25,7 @@
 <header id="home">
     <div class="container">
         <div class="intro-text">
-            <div class="intro-heading">The youth of the future need the skills of the future</div>
+            <div class="intro-heading">The Global South needs the skills of the future.</div>
 
         </div>
     </div>
@@ -56,13 +56,31 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="approach">
+      <div class="container">
+        <h2 class="text-center">Our Solution</h2>
+        <div class="approach-img"></div>
+        <div class="row">
+          <button class="bttn-style" type="button" name="button" href="">
+            Evidence & Logic
+          </button>
+
+          <button class="bttn-style" type="button" name="button" href="#syllabus" class="portfolio-link" data-toggle="modal">
+            Download Syllabus
+          </button>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Portfolio Grid Section -->
     <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">Our Team</h2>
+                    <h3 class="section-subheading text-muted">Our technical and specialised team!</h3>
                 </div>
             </div>
             <div class="row">
@@ -76,7 +94,7 @@
                         <img src="<%= asset_path 'Cory.jpg' %>" class="img-responsive" alt="corey-profilt-img">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
+                        <h4>Cory J. Steinhauer</h4>
                         <p class="text-muted">Graphic Design</p>
                     </div>
                 </div>
@@ -90,7 +108,7 @@
                         <img src="<%= asset_path 'Nik.jpg' %>" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
+                        <h4>Nik Dawson</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
                 </div>
@@ -104,7 +122,7 @@
                         <img src="<%= asset_path 'Pete.png' %>" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
+                        <h4>Peter Argent</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
                 </div>
@@ -118,7 +136,7 @@
                         <img src="<%= asset_path 'Marshall.jpg' %>" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Golden</h4>
+                        <h4>Marshall Gray</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
                 </div>
@@ -132,11 +150,11 @@
                         <img src="img/portfolio/escape.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Escape</h4>
+                        <h4>Dean Pinchen</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -149,19 +167,9 @@
                         <h4>Dreams</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="approach">
-      <div class="container">
-        <h2 class="text-center">Our Solution</h2>
-        <div class="approach-img"></div>
-        <button type="button" name="button" href="">Evidence & Logic</button>
-        <button type="button" name="button">Download Syllabus</button>
-      </div>
     </section>
 
     <!-- Clients Aside -->
@@ -273,6 +281,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
+                    <%= render 'partials/close_modal' %>
                     <div class="lr">
                         <div class="rl">
                         </div>
@@ -283,17 +292,17 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Cory J. We</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <h2 class="profile-head">Cory J. Steinhauer</h2>
+                                <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
                                 <img class="img-responsive img-centered" src="<%= asset_path 'Cory.jpg' %>" alt="">
-                                <p>Cory has worked in the humanitarian sector for almost two decades. Having worked for, among others, the United Nations and major international NGO’s, Cory has a deep understanding of global aid and development.<br><br>For example, in Afghanistan, he led education governance initiatives; in Somalia, he managed development effectiveness programs; and most recently in Syria, he has supported moderate opposition governancee entities build and sustain core and vocational education services.<br><br>Cory’s mix of global experience, education, and innovative thinking is instrumental in his success achieving long-term change</p>
+                                <p class="profile-text">
+                                  Cory has worked in the humanitarian sector for almost two decades. Having worked for, among others, the United Nations and major international NGO’s, Cory has a deep understanding of global aid and development.
+                                  <br><br>
+                                  For example, in Afghanistan, he led education governance initiatives; in Somalia, he managed development effectiveness programs; and most recently in Syria, he has supported moderate opposition governancee entities build and sustain core and vocational education services.
+                                  <br><br>
+                                  Cory’s mix of global experience, education, and innovative thinking is instrumental in his success achieving long-term change.
+                                </p>
                                 <p>
-                                    <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
-                                <ul class="list-inline">
-                                    <li>Date: July 2014</li>
-                                    <li>Client: Round Icons</li>
-                                    <li>Category: Graphic Design</li>
-                                </ul>
                                 <ul class="list-inline social-buttons">
                                     <li><a href="#"><i class="fa fa-twitter"></i></a>
                                     </li>
@@ -302,7 +311,6 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a>
                                     </li>
                                 </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
                     </div>
@@ -316,20 +324,25 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
+                  <%= render 'partials/close_modal' %>
+                    <!-- <div class="lr">
                         <div class="rl">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
-                                <h2>Project Heading</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <h2 class="profile-head">Nik Dawson</h2>
+                                <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
                                 <img class="img-responsive img-centered" src="<%= asset_path 'Nik.jpg' %>" alt="">
-                                <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
-                                <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
+                                <p class="profile-text">
+                                  Nik has an established career in Impact Investing and private investment. At Social Ventures Australia and other private investment funds, Nik has advised and facilitated investments for some of Australia’s most prominent social impact organisations.
+                                  <br><br>
+                                  Having launched his own software applications and facilitated investment rounds for technology startups, Nik’s passion and specialisation lies with the intersection between technology and social impact.
+                                </p>
+
                                 <ul class="list-inline social-buttons">
                                     <li><a href="#"><i class="fa fa-twitter"></i></a>
                                     </li>
@@ -338,7 +351,6 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a>
                                     </li>
                                 </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
                     </div>
@@ -352,6 +364,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
+                  <%= render 'partials/close_modal' %>
                     <div class="lr">
                         <div class="rl">
                         </div>
@@ -362,11 +375,14 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <h2 class="profile-head">Peter Argent</h2>
+                                <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
                                 <img class="img-responsive img-centered" src="<%= asset_path 'Pete.png' %>" alt="">
-                                <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
+                                <p class="profile-text">
+                                  Pete is a passionate technologist and loves sharing his love of coding with people through education. He believes understanding what is possible with technology, empowers people to take charge of their own lives and make a positive difference in their communities.
+                                  <br><br>
+                                  After working at IBM for 10 years, Pete founded a coding school, Coder Factory, and has taught hundreds of students how to build web applications and exposed hundreds more to the wonders of technology.
+                                </p>
                                 <ul class="list-inline social-buttons">
                                     <li><a href="#"><i class="fa fa-twitter"></i></a>
                                     </li>
@@ -375,7 +391,6 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a>
                                     </li>
                                 </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
                     </div>
@@ -389,6 +404,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
+                  <%= render 'partials/close_modal' %>
                     <div class="lr">
                         <div class="rl">
                         </div>
@@ -399,11 +415,15 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <h2 class="profile-head">Marshall Gray</h2>
+                                <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
                                 <img class="img-responsive img-centered" src="<%= asset_path 'Marshall.jpg' %>" alt="">
-                                <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                                <p class="profile-text">
+                                  Marshall is a passionate entrepreneur with a love for technology and education. Through developing his own e-commerce drop shiping business he discovered the power technology has within the new world of business.
+                                  <br><br>
+                                  Marshall has been working with Peter Argent and Coder Factory for over a year teaching people to code. He believes that the world is changing fast and that more people need technical skills so that new ideas and businesses can form and flurish.
+                                </p>
+
                                 <ul class="list-inline social-buttons">
                                     <li><a href="#"><i class="fa fa-twitter"></i></a>
                                     </li>
@@ -412,7 +432,6 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a>
                                     </li>
                                 </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
                     </div>
@@ -426,6 +445,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
+                  <%= render 'partials/close_modal' %>
                     <div class="lr">
                         <div class="rl">
                         </div>
@@ -436,11 +456,14 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <h2 class="profile-head">Dean Pinchen</h2>
+                                <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
                                 <img class="img-responsive img-centered" src="img/portfolio/escape-preview.png" alt="">
-                                <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your about.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
+                                <p class="profile-text">
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                  <br><br>
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
                                 <ul class="list-inline social-buttons">
                                     <li><a href="#"><i class="fa fa-twitter"></i></a>
                                     </li>
@@ -449,7 +472,6 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a>
                                     </li>
                                 </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
                     </div>
@@ -474,7 +496,7 @@
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
                                 <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
                                 <img class="img-responsive img-centered" src="img/portfolio/dreams-preview.png" alt="">
                                 <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
                                 <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
@@ -485,4 +507,35 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Syllabus Modal -->
+
+    <div class="portfolio-modal modal fade" id="syllabus" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="close-modal" data-dismiss="modal">
+                <%= render 'partials/close_modal' %>
+                  <div class="lr">
+                      <div class="rl">
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                  <h2>One Step Away!</h2>
+                  <h3 class="section-subheading">Please provide us with your name email address and country so that we are able to send you a copy of our syllabus!</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-lg-8 col-lg-offset-2">
+                        <%= render 'leads/form' %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
     </div>
