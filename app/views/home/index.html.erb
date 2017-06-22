@@ -5,6 +5,9 @@
     <a href="#about">About</a>
     <a href="#portfolio">Our Team</a>
     <a href="#approach">Solution</a>
+    <a href="#"><%= link_to 'Manifesto', pages_manifesto_path %></a>
+
+
   </div>
 </div>
 
@@ -62,8 +65,8 @@
         <h2 class="text-center">Our Solution</h2>
         <div class="approach-img"></div>
         <div class="row">
-          <button class="bttn-style" type="button" name="button" href="">
-            Evidence & Logic
+          <button class="bttn-style" type="button" name="button" href="#">
+            <%= link_to 'Evidence & Logic', pages_manifesto_path %>
           </button>
 
           <button class="bttn-style" type="button" name="button" href="#syllabus" class="portfolio-link" data-toggle="modal">
@@ -236,7 +239,7 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
+                                <button type="submit" class="bttn-style">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -249,7 +252,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2016</span>
+                    <span class="copyright">&copy; Humanitarian Code</span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
@@ -302,7 +305,6 @@
                                   <br><br>
                                   Cory’s mix of global experience, education, and innovative thinking is instrumental in his success achieving long-term change.
                                 </p>
-                                <p>
                                 <ul class="list-inline social-buttons">
                                     <li><a href="#"><i class="fa fa-twitter"></i></a>
                                     </li>
@@ -311,6 +313,7 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a>
                                     </li>
                                 </ul>
+                                <%= render 'partials/close_modal' %>
                             </div>
                         </div>
                     </div>
@@ -351,6 +354,7 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a>
                                     </li>
                                 </ul>
+                                <%= render 'partials/close_modal' %>
                             </div>
                         </div>
                     </div>
@@ -391,6 +395,7 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a>
                                     </li>
                                 </ul>
+                                <%= render 'partials/close_modal' %>
                             </div>
                         </div>
                     </div>
@@ -432,6 +437,7 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a>
                                     </li>
                                 </ul>
+                                <%= render 'partials/close_modal' %>
                             </div>
                         </div>
                     </div>
@@ -472,6 +478,7 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a>
                                     </li>
                                 </ul>
+                                <%= render 'partials/close_modal' %>
                             </div>
                         </div>
                     </div>
@@ -529,13 +536,15 @@
               </div>
               <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
-                  <div class="modal-body">
+                  <div class="modal-body" id="syllabus">
                     <div class="row">
-                      <div class="col-lg-8 col-lg-offset-2">
+                      <div class="col-lg-8 col-lg-offset-2" id="download-form">
                         <%= render 'leads/form' %>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-    </div>
+            </div>
+          </div>
+        </div>

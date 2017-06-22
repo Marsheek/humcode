@@ -28,8 +28,9 @@ class LeadsController < ApplicationController
 
     respond_to do |format|
       if @lead.save
-        format.html { redirect_to @lead, notice: 'Lead was successfully created.' }
-        format.json { render :show, status: :created, location: @lead }
+        # format.html { redirect_to @lead, notice: 'Lead was successfully created.' }
+        format.js
+        # this will now look for a create.js.erb file in the leads view folder
       else
         format.html { render :new }
         format.json { render json: @lead.errors, status: :unprocessable_entity }

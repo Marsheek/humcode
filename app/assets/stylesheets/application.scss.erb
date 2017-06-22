@@ -175,16 +175,28 @@
    color: rgba(18, 84, 136, 1);
    font-size: 25px;
    width: 300px;
+   margin-bottom: 15px;
  }
 
  .bttn-style:hover {
-   background-color: #2dc7ff;
+   background-color: #88D9E6;
    border-radius: 6px;
    border-color: #2dc7ff;
    padding: 5px 15px;
    color: white;
    font-size: 25px;
    width: 300px;
+   margin-bottom: 15px;
+ }
+ .bttn-style:hover a {
+   background-color: #88D9E6;
+   border-radius: 6px;
+   border-color: #2dc7ff;
+   padding: 5px 15px;
+   color: white;
+   font-size: 25px;
+   width: 300px;
+   margin-bottom: 15px;
  }
  .navbar-custom {
    background-color: transparent;
@@ -310,8 +322,8 @@
  }
  @media (min-width: 768px) {
    header .intro-text {
-     padding-top: 300px;
-     padding-bottom: 200px;
+     padding-top: 265px;
+     padding-bottom: 240px;
    }
    header .intro-text .intro-heading {
      font-family: 'Roboto Mono', monospace;
@@ -658,8 +670,8 @@
    margin: 50px auto;
  }
  section#contact {
-   background-color: #222222;
-   background-image: url('../img/map-image.png');
+   background-color: rgba(18, 84, 136, 1);
+   background-image: url('/assets/map-image.png');
    background-position: center;
    background-repeat: no-repeat;
  }
@@ -734,7 +746,7 @@
  }
  ul.social-buttons li a {
    display: block;
-   background-color: rgba(18, 84, 136, 1);
+   background-color: #2dc7ff;
    height: 40px;
    width: 40px;
    border-radius: 100%;
@@ -749,7 +761,7 @@
  ul.social-buttons li a:hover,
  ul.social-buttons li a:focus,
  ul.social-buttons li a:active {
-   background-color: #2dc7ff;
+   background-color: #125488;
  }
  .btn:focus,
  .btn:active,
@@ -778,6 +790,7 @@
  }
  .portfolio-modal .modal-content p {
    margin-bottom: 30px;
+   padding: 0 40px 40px 40px;
  }
  .portfolio-modal .modal-content p.item-intro {
    margin: 20px 0 30px;
@@ -802,9 +815,7 @@
   //  background-image: image("x.png");
   //  cursor: pointer;
  }
- .portfolio-modal .close-modal:hover {
-   opacity: 0.3;
- }
+
  .portfolio-modal .modal-content label {
    text-align: left;
  }
@@ -870,6 +881,85 @@
      font-size: 21px;
    }
  }
+
+ // Manifesto CSS
+
+#manifesto {
+  background-image: url(/assets/manifesto-bg.jpg);
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  color: white;
+  overflow:scroll;
+}
+
+#manifesto h2 {
+  color: #f0f8ff;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  font-size: 70px;
+  text-align: center;
+}
+
+#manifesto h3 {
+  color: #f0f8ff;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  font-size: 25px;
+  font-style: italic;
+  line-height: 1.2em;
+}
+.man-subhead {
+  color: #f0f8ff;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+}
+
+
+#manifesto p {
+  color: #f0f8ff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  padding-bottom: 0.7em;
+}
+
+#manifesto ol li {
+  color: #f0f8ff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 1.5em;
+  padding-bottom: 0.7em;
+}
+
+#manifesto ul li {
+  color: #f0f8ff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 1.5em;
+  padding-bottom: 0.7em;
+}
+
+.man-image {
+  text-align: center;
+  padding: 30px;
+}
+
+.man-image2 {
+  width: 100%;
+}
+
+
 
 
 /* Bootstrap CSS */
@@ -1973,14 +2063,14 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: rgba(18, 84, 136, 1);
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
-  text-decoration: underline;
+  text-decoration: none;
 }
+
 a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -3999,7 +4089,7 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary {
   color: #fff;
-  background-color: #337ab7;
+  background-color: #2dc7ff;
   border-color: #2e6da4;
 }
 .btn-primary:focus,
@@ -4010,8 +4100,8 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #125488;
+  border-color: #2dc7ff;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -6841,13 +6931,24 @@ button.close {
 }
 .modal-body {
   position: relative;
-  background-color: rgba(18,84,136,0.8);
+  background-color: #3C91E6;
+
+  background-image: url(/assets/modal-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: white;
+
   // border-radius: 40px;
   padding: 15px;
-
-  // -webkit-
-  // -moz
 }
+
+
 .modal-footer {
   padding: 15px;
   text-align: right;
@@ -7708,7 +7809,7 @@ button.close {
 }
 
 .overlay a {
-    padding: 8px;
+    padding: 5px;
     text-decoration: none;
     font-size: 36px;
     color: #f0f8ff;
