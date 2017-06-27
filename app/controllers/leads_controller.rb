@@ -28,6 +28,8 @@ class LeadsController < ApplicationController
 
     respond_to do |format|
       if @lead.save
+        LeadMailer.response(@lead.id).deliver_now
+        LeadMailer.recieved(@lead.id).deliver_now
         # format.html { redirect_to @lead, notice: 'Lead was successfully created.' }
         format.js
         # this will now look for a create.js.erb file in the leads view folder
